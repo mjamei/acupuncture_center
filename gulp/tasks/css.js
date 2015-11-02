@@ -5,7 +5,7 @@ var autoprefixer = require('autoprefixer-core');
 var csswring = require('csswring');
 var browserSync  = require('browser-sync');
 
-gulp.task('css', function() {
+gulp.task('css', ['copyBootstrap'], function() {
   var processors = [
     autoprefixer({browsers: ['last 1 version']}),
     csswring
@@ -17,3 +17,7 @@ gulp.task('css', function() {
 });
 
 
+gulp.task('copyBootstrap', function() {
+  return gulp.src('node_modules/bootstrap/dist/css/bootstrap.css')
+    .pipe(gulp.dest(config.dest));
+});
