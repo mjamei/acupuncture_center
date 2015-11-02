@@ -4,6 +4,8 @@ Clone this repo as a easy starter template for frontend projects. Angular and D3
 
 ## Getting started
 
+If you're on a Mac, make sure you have XCode installed. You can find it in the App Store. After installing, you have to run Xcode once first, accept terms when asked, and let it install components. Now you should be good to go.
+
     brew install node
     npm install -g gulp
     npm install
